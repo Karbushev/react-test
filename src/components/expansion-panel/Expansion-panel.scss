@@ -1,0 +1,40 @@
+$padding: 20px;
+
+.expansion-panel {
+  display: flex;
+  flex-direction: column;
+
+
+  &__header {
+    width: calc(100% - (2 * $padding));
+    display: flex;
+    height: 60px;
+    cursor: pointer;
+    padding: 0 $padding;
+    border-bottom: 1px solid #282c34;
+    background-color: #D6EDFF;
+
+    &:hover {
+      background-color: #F3FBFF;
+    }
+  }
+
+  &__header,
+  &__content {
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__header,
+  &__content,
+  &__sub-content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 100%;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+$wrapper-padding: 20px;
+
+.modal-header {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $wrapper-padding 20px $wrapper-padding;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  margin: 0 -#{$wrapper-padding} 20px -#{$wrapper-padding};
+
+  &__close {
+    cursor: pointer;
+  }
+}

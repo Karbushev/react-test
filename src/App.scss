@@ -1,0 +1,60 @@
+@use './styles/Modal';
+
+.app {
+  text-align: center;
+}
+
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app {
+  &__button {
+    margin-right: 20px;
+    color: white;
+    background-color: #04d8f9;
+    text-decoration: none;
+
+    &--green {
+      background-color: green;
+
+      &:hover {
+        background-color: limegreen;
+      }
+    }
+
+    &:hover {
+      background-color: #61dafb;
+    }
+
+    &:disabled {
+      background-color: gainsboro;
+      color: white;
+    }
+  }
+
+  &__icon-button {
+    margin-right: 10px;
+  }
+
+  &__input {
+    padding: 2px 8px;
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
