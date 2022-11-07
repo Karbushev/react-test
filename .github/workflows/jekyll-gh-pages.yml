@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node
         run: npm i
       - name: Build App
-        run: npm build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
