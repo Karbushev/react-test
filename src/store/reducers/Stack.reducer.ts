@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { STACKS_DATA } from '../initial-data/stack';
+import { STACK_MODULES_DATA } from '../initial-data/stack-modules';
 import { Competency } from '../../interfaces/competency';
 
-const initialState: Competency[] = STACKS_DATA;
+const initialState: Competency[] = STACK_MODULES_DATA;
 
 export const StackReducer = createSlice({
   name: 'stack',

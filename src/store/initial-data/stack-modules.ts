@@ -1,6 +1,6 @@
 import { Competency } from '../../interfaces/competency';
 
-export const STACKS_DATA: Competency[] = [
+export const STACK_MODULES_DATA: Competency[] = [
   {
     name: 'Software Engineering (Specialization)',
     description: 'Core technology stack to develop product increments',

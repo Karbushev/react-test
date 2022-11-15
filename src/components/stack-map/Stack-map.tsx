@@ -1,21 +1,34 @@
 import React from 'react';
-import logo from '../../logo.svg';
+import { useAppSelector } from '../../store/hooks';
+import { selectStacks } from '../../store/reducers/Stack.reducer';
 
 export function StackMap() {
+  const stacks = useAppSelector(selectStacks);
+  const columns = [
+    { title: 'Stack', key: 'name' },
+  ];
+
+
   return (
-    <div>
-      <img src={logo} className="app-logo" alt="logo"/>
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a
-        className="app-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React!
-      </a>
+    <div className="stack-map">
+      <table>
+        <thead>
+        <th>
+          {
+            columns.map((column) => (
+              <td>{[column.key]}</td>
+            ))
+          }
+        </th>
+        </thead>
+        <tbody>
+        <tr>
+          {stacks.map((stack) => (
+            <td>{stack.name}</td>
+          ))}
+        </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
